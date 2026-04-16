@@ -1,22 +1,52 @@
 [
   {
-    "id": "critique-morality",
-    "title": "Critique of Morality and the Revaluation of Values",
-    "description": "A comprehensive philosophical investigation challenging conventional Judeo-Christian moral frameworks and exploring the genealogy of moral concepts. This work proposes a fundamental reevaluation of all values through the lens of the will to power.",
-    "year": 1887,
-    "status": "Completed",
-    "authors": ["friedrich-nietzsche"],
+    "id": "mindhealer",
+    "title": "MindHealer",
+    "description": "中文心理咨询大模型。基于 Google Gemma-4 微调，QLoRA 训练，vLLM 部署。",
+    "year": 2026,
+    "status": "Active",
+    "authors": ["cyclone-mind"],
     "heroImage": "/src/assets/blog-placeholder-2.jpg",
-    "link": "https://en.wikipedia.org/wiki/On_the_Genealogy_of_Morality"
+    "link": "https://github.com/cyclone-mind/MindHealer"
   },
   {
-    "id": "pessimism-philosophy",
-    "title": "Philosophy of Pessimism and the Will",
-    "description": "An exploration of pessimism as a philosophical worldview and the underlying metaphysical will that animates all existence. This work examines suffering, denial, and the possibility of aesthetic redemption through art.",
-    "year": 1818,
+    "id": "kong-oa",
+    "title": "Kong OA",
+    "description": "一个基于 FastApi 和 Vue3 的 RBAC 权限管理系统。",
+    "year": 2025,
     "status": "Completed",
-    "authors": ["arthur-schopenhauer"],
+    "authors": ["cyclone-mind"],
     "heroImage": "/src/assets/blog-placeholder-3.jpg",
-    "link": "https://en.wikipedia.org/wiki/The_World_as_Will_and_Representation"
+    "link": "https://github.com/cyclone-mind/Kong_OA"
+  },
+  {
+    "id": "coord-convert",
+    "title": "Coord Convert",
+    "description": "基于 Rust 和 Tauri 的高性能坐标系转换工具。",
+    "year": 2026,
+    "status": "Completed",
+    "authors": ["cyclone-mind"],
+    "heroImage": "/src/assets/blog-placeholder-2.jpg",
+    "link": "https://github.com/cyclone-mind/coord-convert"
+  },
+  {
+    "id": "cyclone-httpserver",
+    "title": "Cyclone HTTP Server",
+    "description": "一个基于 muduo 库的轻量级 HTTP 服务框架。",
+    "year": 2025,
+    "status": "Completed",
+    "authors": ["cyclone-mind"],
+    "heroImage": "/src/assets/blog-placeholder-3.jpg",
+    "link": "https://github.com/cyclone-mind/cyclone-HTTPServer"
+  },
+  {
+    "id": "asynclog-cloudstorage",
+    "title": "AsyncLog CloudStorage",
+    "description": "一个高性能异步日志系统，支持云存储备份功能。",
+    "year": 2025,
+    "status": "Completed",
+    "authors": ["cyclone-mind"],
+    "heroImage": "/src/assets/blog-placeholder-2.jpg",
+    "link": "https://github.com/cyclone-mind/AsyncLog_CloudStorage"
   }
 ]

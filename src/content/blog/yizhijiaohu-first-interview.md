@@ -1,7 +1,7 @@
 ---
 title: '上海弈智交互初面'
 description: '上海弈智交互初面'
-date: '2026-04-17'
+pubDate: '2026-04-17'
 authors:
   - shouyu
 toc: true

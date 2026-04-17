@@ -14,7 +14,7 @@ tags:
 
 ### 选定框架与代码段
 
-我选择了 [claude code] 的 [tool] 模块，核心代码位于 `services/tools/toolOrchestration.t`。
+我选择了 [claude code] 的 [tool] 模块，核心代码位于 `services/tools/toolOrchestration.ts`。
 
 ### 代码核心逻辑
 
@@ -35,15 +35,15 @@ function partitionToolCalls(toolUseMessages, toolUseContext): Batch[] {
           try {
             return Boolean(tool?.isConcurrencySafe(parsedInput.data))
           } catch {
-            return false  // 抛异常也当不安全，又是 fail-closed
+            return false 
           }
         })()
-      : false  // 解析失败也当不安全
+      : false 
 
     if (isConcurrencySafe && acc[acc.length - 1]?.isConcurrencySafe) {
-      acc[acc.length - 1].blocks.push(toolUse)  // 合并到并发批次
+      acc[acc.length - 1].blocks.push(toolUse)  
     } else {
-      acc.push({ isConcurrencySafe, blocks: [toolUse] })  // 新开一个批次
+      acc.push({ isConcurrencySafe, blocks: [toolUse] }) 
     }
     return acc
   }, [])
@@ -55,11 +55,11 @@ if (isConcurrencySafe) {
 const queuedContextModifiers = {}
 forawait (const update of runToolsConcurrently(blocks, ...)) {
     if (update.contextModifier) {
-      // 先排队，不立即应用
+
       queuedContextModifiers[toolUseID].push(modifyContext)
     }
   }
-// 全部跑完后，按工具调用顺序依次应用
+
 for (const block of blocks) {
     for (const modifier of queuedContextModifiers[block.id]) {
       currentContext = modifier(currentContext)

@@ -3,7 +3,7 @@ title: 'How to configure AstroScholar theme'
 description: 'A comprehensive guide on configuring the AstroScholar theme.'
 pubDate: '2026-04-03'
 authors:
-  - shravan-goswami
+  - shouyu
 toc: true
 tags:
   - astro

@@ -104,14 +104,7 @@
 #代码随想录 </a><a href="/tags/数据结构与算法" style="text-decoration: none; font-size: 0.85rem; font-weight: 600; color: var(--color-accent); background: var(--color-bg-offset); padding: 0.2rem 0.6rem; border-radius: 999px; border: 1px solid var(--color-border);" data-astro-cid-bvzihdzo>
 #数据结构与算法 </a> </div> <hr data-astro-cid-bvzihdzo> </div> <script type="module">let e;function i(){e&&e.disconnect();const n=t=>{t.forEach(c=>{const o=c.target.getAttribute("id");if(!o)return;const a=document.querySelector(`.toc-item a[href="#${o}"]`),l=document.querySelector(`.toc-item-mobile a[href="#${o}"]`);c.isIntersecting&&(document.querySelectorAll(".toc-item").forEach(r=>r.classList.remove("active")),document.querySelectorAll(".toc-item-mobile").forEach(r=>r.classList.remove("active")),a?.parentElement?.classList.add("active"),l?.parentElement?.classList.add("active"))})},s={root:null,rootMargin:"-100px 0px -60% 0px",threshold:0};e=new IntersectionObserver(n,s),document.querySelectorAll("h2, h3").forEach(t=>{e?.observe(t)})}i();document.addEventListener("astro:after-swap",i);</script> <details class="toc-mobile-details" data-astro-cid-xvrfupwn><summary class="toc-mobile-summary" data-astro-cid-xvrfupwn>
 Table of Contents
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-xvrfupwn><path stroke="none" d="M0 0h24v24H0z" fill="none" data-astro-cid-xvrfupwn></path><polyline points="6 9 12 15 18 9" data-astro-cid-xvrfupwn></polyline></svg></summary><nav class="toc-mobile-content" data-astro-cid-xvrfupwn><ul class="toc-list-mobile" data-astro-cid-xvrfupwn><li class="toc-item-mobile depth-2" data-astro-cid-xvrfupwn><a href="#摘要" data-astro-cid-xvrfupwn>摘要</a></li><li class="toc-item-mobile depth-2" data-astro-cid-xvrfupwn><a href="#正文" data-astro-cid-xvrfupwn>正文</a></li></ul></nav></details> <nav class="toc-container" data-astro-cid-xvrfupwn><div class="toc-inner" data-astro-cid-xvrfupwn><h2 class="toc-title" data-astro-cid-xvrfupwn>Table of Contents</h2><ul class="toc-list" data-astro-cid-xvrfupwn><li class="toc-item depth-2" data-astro-cid-xvrfupwn><a href="#摘要" data-astro-cid-xvrfupwn>摘要</a></li><li class="toc-item depth-2" data-astro-cid-xvrfupwn><a href="#正文" data-astro-cid-xvrfupwn>正文</a></li></ul></div></nav>   <h1 id="代码随想录-栈与队列总结">代码随想录 栈与队列：总结</h1>
-<p><strong>发布日期:</strong> 2025/12/21
-<strong>阅读时间:</strong> 1 分钟
-<strong>标签:</strong> 算法笔记, 栈和队列, 代码随想录, 数据结构与算法, 栈与队列</p>
-<h2 id="摘要">摘要</h2>
-<p>栈与队列理论基础</p>
-<h2 id="正文">正文</h2>
-<h4 id="栈与队列理论基础">栈与队列理论基础</h4>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-xvrfupwn><path stroke="none" d="M0 0h24v24H0z" fill="none" data-astro-cid-xvrfupwn></path><polyline points="6 9 12 15 18 9" data-astro-cid-xvrfupwn></polyline></svg></summary><nav class="toc-mobile-content" data-astro-cid-xvrfupwn><ul class="toc-list-mobile" data-astro-cid-xvrfupwn><li class="toc-item-mobile depth-2" data-astro-cid-xvrfupwn><a href="#栈与队列理论基础" data-astro-cid-xvrfupwn>栈与队列理论基础</a></li><li class="toc-item-mobile depth-2" data-astro-cid-xvrfupwn><a href="#栈在系统中的应用" data-astro-cid-xvrfupwn>栈在系统中的应用</a></li><li class="toc-item-mobile depth-2" data-astro-cid-xvrfupwn><a href="#栈经典题目" data-astro-cid-xvrfupwn>栈经典题目</a></li><li class="toc-item-mobile depth-3" data-astro-cid-xvrfupwn><a href="#括号匹配问题" data-astro-cid-xvrfupwn>括号匹配问题</a></li><li class="toc-item-mobile depth-3" data-astro-cid-xvrfupwn><a href="#字符串去重" data-astro-cid-xvrfupwn>字符串去重</a></li><li class="toc-item-mobile depth-3" data-astro-cid-xvrfupwn><a href="#逆波兰表达式" data-astro-cid-xvrfupwn>逆波兰表达式</a></li><li class="toc-item-mobile depth-2" data-astro-cid-xvrfupwn><a href="#队列经典题目" data-astro-cid-xvrfupwn>队列经典题目</a></li><li class="toc-item-mobile depth-3" data-astro-cid-xvrfupwn><a href="#滑动窗口最大值" data-astro-cid-xvrfupwn>滑动窗口最大值</a></li><li class="toc-item-mobile depth-3" data-astro-cid-xvrfupwn><a href="#求前k个高频元素" data-astro-cid-xvrfupwn>求前K个高频元素</a></li><li class="toc-item-mobile depth-2" data-astro-cid-xvrfupwn><a href="#总结" data-astro-cid-xvrfupwn>总结</a></li></ul></nav></details> <nav class="toc-container" data-astro-cid-xvrfupwn><div class="toc-inner" data-astro-cid-xvrfupwn><h2 class="toc-title" data-astro-cid-xvrfupwn>Table of Contents</h2><ul class="toc-list" data-astro-cid-xvrfupwn><li class="toc-item depth-2" data-astro-cid-xvrfupwn><a href="#栈与队列理论基础" data-astro-cid-xvrfupwn>栈与队列理论基础</a></li><li class="toc-item depth-2" data-astro-cid-xvrfupwn><a href="#栈在系统中的应用" data-astro-cid-xvrfupwn>栈在系统中的应用</a></li><li class="toc-item depth-2" data-astro-cid-xvrfupwn><a href="#栈经典题目" data-astro-cid-xvrfupwn>栈经典题目</a></li><li class="toc-item depth-3" data-astro-cid-xvrfupwn><a href="#括号匹配问题" data-astro-cid-xvrfupwn>括号匹配问题</a></li><li class="toc-item depth-3" data-astro-cid-xvrfupwn><a href="#字符串去重" data-astro-cid-xvrfupwn>字符串去重</a></li><li class="toc-item depth-3" data-astro-cid-xvrfupwn><a href="#逆波兰表达式" data-astro-cid-xvrfupwn>逆波兰表达式</a></li><li class="toc-item depth-2" data-astro-cid-xvrfupwn><a href="#队列经典题目" data-astro-cid-xvrfupwn>队列经典题目</a></li><li class="toc-item depth-3" data-astro-cid-xvrfupwn><a href="#滑动窗口最大值" data-astro-cid-xvrfupwn>滑动窗口最大值</a></li><li class="toc-item depth-3" data-astro-cid-xvrfupwn><a href="#求前k个高频元素" data-astro-cid-xvrfupwn>求前K个高频元素</a></li><li class="toc-item depth-2" data-astro-cid-xvrfupwn><a href="#总结" data-astro-cid-xvrfupwn>总结</a></li></ul></div></nav>   <h2 id="栈与队列理论基础">栈与队列理论基础</h2>
 <p>理解四个问题：</p>
 <ol>
 <li>
@@ -146,7 +139,7 @@ Table of Contents
 </li>
 </ul>
 <p>为什么 deque 在内存中不保证连续，是因为 deque 作为双端队列，它在队头和队尾都支持快速插入和删除的操作，都是 O(1) 的时间复杂度，因此必须是非连续内存。</p>
-<h4 id="栈在系统中的应用">栈在系统中的应用</h4>
+<h2 id="栈在系统中的应用">栈在系统中的应用</h2>
 <p>其实，栈在系统中的应用有非常非常多。</p>
 <ol>
 <li>
@@ -169,17 +162,17 @@ Table of Contents
 </li>
 </ol>
 <p>在记录一系列操作或者状态的时候，可以使用 栈。处理表达式或语法。</p>
-<h4 id="栈经典题目">栈经典题目</h4>
-<h5 id="括号匹配问题">括号匹配问题</h5>
+<h2 id="栈经典题目">栈经典题目</h2>
+<h3 id="括号匹配问题">括号匹配问题</h3>
 <p>括号匹配问题是使用栈解决的经典问题。</p>
 <p><strong>有效的括号</strong>中有三种不匹配的情况。左括号多余、右括号多余，或者没有多余但类型不匹配，这三种情况。以及在匹配左括号的时候，可以让对应的右括号入栈。最后只需要比较当前元素和栈顶元素是否相等，这样就可以了，比左括号入栈要简单得多。</p>
-<h5 id="字符串去重">字符串去重</h5>
+<h3 id="字符串去重">字符串去重</h3>
 <p><strong>删除字符串中所有相邻重复项</strong>相邻的重复项需要我们对字符串连着的两个元素进行判断，本质上也是两个元素的匹配问题，因而可以使用栈。</p>
 <p>思路就是把字符串按照顺序放到栈中，遇到匹配的元素栈顶就弹出。这样的话，栈里面剩下的就都是不匹配的元素了。</p>
-<h5 id="逆波兰表达式">逆波兰表达式</h5>
+<h3 id="逆波兰表达式">逆波兰表达式</h3>
 <p>逆波澜表达式实际上是计算机处理表达式的原理。拿到两个操作对象，然后匹配到运算符的话，就进行计算。这样消耗掉两个操作对象，然后就又拿到一个操作对象。</p>
-<h4 id="队列经典题目">队列经典题目</h4>
-<h5 id="滑动窗口最大值">滑动窗口最大值</h5>
+<h2 id="队列经典题目">队列经典题目</h2>
+<h3 id="滑动窗口最大值">滑动窗口最大值</h3>
 <p>这道题的主要思想是：我们是要找滑动窗口里面的最大值，但问题是在滑动窗口里面线性查找的时间复杂度是比较高的。</p>
 <p>所以说，滑动窗口可以使用队列来维护。队列是一个<strong>单调队列</strong>，队列元素从大到小排列。队列的队头一个元素是窗口里面的最大值。这样就可以以 O(1) 的时间复杂度取到这个滑动窗口里的最大值了。</p>
 <p>但是，对于队列来说，移动窗口时需要移除的元素可能并不在队列的头部。这样，获取最大值的时间复杂度是降低了，但是移动窗口的时候移除元素又变得很麻烦。</p>
@@ -195,13 +188,13 @@ Table of Contents
 </li>
 </ol>
 <p>这道题单调队列是自己实现的，并未传统的队列（std::queue）。<strong>单调队列不是一成不变的，而是不同场景不同写法</strong>，总之要保证队列里单调递减或递增的原则，所以叫做单调队列。</p>
-<h5 id="求前k个高频元素">求前K个高频元素</h5>
+<h3 id="求前k个高频元素">求前K个高频元素</h3>
 <p>这道题引出了优先级队列，什么是优先级队列呢？</p>
 <p>其实<strong>就是一个披着队列外衣的堆</strong>，因为优先级队列对外接口只是从队头取元素，从队尾添加元素，再无其他取元素的方式，看起来就是一个队列。</p>
 <p>堆里的元素有顺序的，取出和添加时间复杂度都是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(nlogn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.0359em;">g</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
 <p>本题就要**使用优先级队列来对部分频率进行排序。**注意这里是对部分数据进行排序而不需要对所有数据排序！</p>
 <p>所以排序的过程的时间复杂度是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.0139em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mclose">)</span></span></span></span> ，整个算法的时间复杂度是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n\log k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.0139em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mclose">)</span></span></span></span> 。</p>
-<h4 id="总结">总结</h4>
+<h2 id="总结">总结</h2>
 <p>用栈实现队列，用队列实现栈考验 stack 和 que 的基础实现</p>
 <p>通过括号匹配问题、字符串取出相邻重复项、逆波兰表达式讲了栈的应用。这三个都是一个匹配问题，<strong>消除匹配项</strong>。</p>
 <p>通过求滑动窗口最大值，以及前K个高频元素介绍了两种队列：<strong>单调队列和优先级队列</strong>，这是特殊场景解决问题的利器，是一定要掌握的。</p>  </div> </div> </div> </article> </main> <footer class="site-footer" data-astro-cid-sz7xmlte> <div class="footer-content" data-astro-cid-sz7xmlte> <div class="footer-col brand-col" data-astro-cid-sz7xmlte> <h3 data-astro-cid-sz7xmlte>Zhou Shouyu</h3> <p data-astro-cid-sz7xmlte> The portfolio of Zhou Shouyu. </p> <div class="copyright" data-astro-cid-sz7xmlte>

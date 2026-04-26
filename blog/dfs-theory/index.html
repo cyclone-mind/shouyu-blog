@@ -103,13 +103,8 @@
 #图论 </a><a href="/tags/深度优先搜索" style="text-decoration: none; font-size: 0.85rem; font-weight: 600; color: var(--color-accent); background: var(--color-bg-offset); padding: 0.2rem 0.6rem; border-radius: 999px; border: 1px solid var(--color-border);" data-astro-cid-bvzihdzo>
 #深度优先搜索 </a> </div> <hr data-astro-cid-bvzihdzo> </div> <script type="module">let e;function i(){e&&e.disconnect();const n=t=>{t.forEach(c=>{const o=c.target.getAttribute("id");if(!o)return;const a=document.querySelector(`.toc-item a[href="#${o}"]`),l=document.querySelector(`.toc-item-mobile a[href="#${o}"]`);c.isIntersecting&&(document.querySelectorAll(".toc-item").forEach(r=>r.classList.remove("active")),document.querySelectorAll(".toc-item-mobile").forEach(r=>r.classList.remove("active")),a?.parentElement?.classList.add("active"),l?.parentElement?.classList.add("active"))})},s={root:null,rootMargin:"-100px 0px -60% 0px",threshold:0};e=new IntersectionObserver(n,s),document.querySelectorAll("h2, h3").forEach(t=>{e?.observe(t)})}i();document.addEventListener("astro:after-swap",i);</script> <details class="toc-mobile-details" data-astro-cid-xvrfupwn><summary class="toc-mobile-summary" data-astro-cid-xvrfupwn>
 Table of Contents
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-xvrfupwn><path stroke="none" d="M0 0h24v24H0z" fill="none" data-astro-cid-xvrfupwn></path><polyline points="6 9 12 15 18 9" data-astro-cid-xvrfupwn></polyline></svg></summary><nav class="toc-mobile-content" data-astro-cid-xvrfupwn><ul class="toc-list-mobile" data-astro-cid-xvrfupwn><li class="toc-item-mobile depth-2" data-astro-cid-xvrfupwn><a href="#正文" data-astro-cid-xvrfupwn>正文</a></li></ul></nav></details> <nav class="toc-container" data-astro-cid-xvrfupwn><div class="toc-inner" data-astro-cid-xvrfupwn><h2 class="toc-title" data-astro-cid-xvrfupwn>Table of Contents</h2><ul class="toc-list" data-astro-cid-xvrfupwn><li class="toc-item depth-2" data-astro-cid-xvrfupwn><a href="#正文" data-astro-cid-xvrfupwn>正文</a></li></ul></div></nav>   <h1 id="深搜理论基础">深搜理论基础</h1>
-<p><strong>发布日期:</strong> 2025/12/21
-<strong>阅读时间:</strong> 1 分钟
-<strong>标签:</strong> 算法笔记, 图论, 数据结构, 算法, 深度优先搜索, DFS, Leetcode</p>
-<h2 id="正文">正文</h2>
-<h1 id="深搜理论基础-1">深搜理论基础</h1>
-<h4 id="dfs搜索过程">dfs搜索过程</h4>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-xvrfupwn><path stroke="none" d="M0 0h24v24H0z" fill="none" data-astro-cid-xvrfupwn></path><polyline points="6 9 12 15 18 9" data-astro-cid-xvrfupwn></polyline></svg></summary><nav class="toc-mobile-content" data-astro-cid-xvrfupwn><ul class="toc-list-mobile" data-astro-cid-xvrfupwn><li class="toc-item-mobile depth-2" data-astro-cid-xvrfupwn><a href="#深搜理论基础" data-astro-cid-xvrfupwn>深搜理论基础</a></li><li class="toc-item-mobile depth-3" data-astro-cid-xvrfupwn><a href="#dfs搜索过程" data-astro-cid-xvrfupwn>dfs搜索过程</a></li><li class="toc-item-mobile depth-3" data-astro-cid-xvrfupwn><a href="#代码框架" data-astro-cid-xvrfupwn>代码框架</a></li><li class="toc-item-mobile depth-3" data-astro-cid-xvrfupwn><a href="#深搜三部曲" data-astro-cid-xvrfupwn>深搜三部曲</a></li></ul></nav></details> <nav class="toc-container" data-astro-cid-xvrfupwn><div class="toc-inner" data-astro-cid-xvrfupwn><h2 class="toc-title" data-astro-cid-xvrfupwn>Table of Contents</h2><ul class="toc-list" data-astro-cid-xvrfupwn><li class="toc-item depth-2" data-astro-cid-xvrfupwn><a href="#深搜理论基础" data-astro-cid-xvrfupwn>深搜理论基础</a></li><li class="toc-item depth-3" data-astro-cid-xvrfupwn><a href="#dfs搜索过程" data-astro-cid-xvrfupwn>dfs搜索过程</a></li><li class="toc-item depth-3" data-astro-cid-xvrfupwn><a href="#代码框架" data-astro-cid-xvrfupwn>代码框架</a></li><li class="toc-item depth-3" data-astro-cid-xvrfupwn><a href="#深搜三部曲" data-astro-cid-xvrfupwn>深搜三部曲</a></li></ul></div></nav>   <h2 id="深搜理论基础">深搜理论基础</h2>
+<h3 id="dfs搜索过程">dfs搜索过程</h3>
 <p>可一个方向搜，不到黄河不回头。</p>
 <p>两个关键点：</p>
 <ul>
@@ -120,14 +115,14 @@ Table of Contents
 <p>换方向是撤销原路径，改为节点连接的下一个路径，回溯</p>
 </li>
 </ul>
-<h4 id="代码框架">代码框架</h4>
-<h5 id="基础框架">基础框架</h5>
+<h3 id="代码框架">代码框架</h3>
+<h4 id="基础框架">基础框架</h4>
 <pre class="astro-code astro-code-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> dfs</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(参数){</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    处理节点</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    dfs</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(图，选择的节点);</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> // 递归</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    回溯，撤销处理结果</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
-<h5 id="回溯法框架">回溯法框架</h5>
+<h4 id="回溯法框架">回溯法框架</h4>
 <pre class="astro-code astro-code-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> backtracking</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(参数) {</span></span>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (终止条件) {</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        存放结果;</span></span>
@@ -139,7 +134,7 @@ Table of Contents
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        回溯，撤销处理结果</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
-<h5 id="图论中dfs框架">图论中dfs框架</h5>
+<h4 id="图论中dfs框架">图论中dfs框架</h4>
 <pre class="astro-code astro-code-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> dfs</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(参数) {</span></span>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (终止条件) {</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        存放结果;</span></span>
@@ -151,7 +146,7 @@ Table of Contents
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        回溯，撤销处理结果</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
-<h4 id="深搜三部曲">深搜三部曲</h4>
+<h3 id="深搜三部曲">深搜三部曲</h3>
 <ol>
 <li>
 <p>确认递归函数，参数

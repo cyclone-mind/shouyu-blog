@@ -1,5 +1,35 @@
 [
   {
+    "id":"coze-agent",
+    "title": "一键生成行业调研PPT 工作流",
+    "description": "使用 coze 实现的一个一键生成行业PPT的工作流。关键插件：头条新闻、链接读取和iSlide",
+    "year": 2026,
+    "status": "Completed",
+    "authors": ["cyclone-mind"],
+    "heroImage": "/src/assets/nature.png",
+    "link": "https://www.coze.cn/s/KQR4fO-_scU/"
+  },
+  {
+    "id": "level1-agent",
+    "title": "深夜情感主持",
+    "description": "使用 coze 实现的一个曾小贤风格的情感电台主持智能体。",
+    "year": 2026,
+    "status": "Completed",
+    "authors": ["cyclone-mind"],
+    "heroImage": "/src/assets/nature.png",
+    "link": "https://www.coze.cn/s/LPlTXysOQpE/"
+  },
+  {
+    "id": "level2-agent",
+    "title": "时事评论通",
+    "description": "使用 Dify 实现的一个资深媒体评论员智能体，专注于解读热点事件的深层逻辑与社会影响。",
+    "year": 2026,
+    "status": "Completed",
+    "authors": ["cyclone-mind"],
+    "heroImage": "/src/assets/nature.png",
+    "link": "https://udify.app/chat/wToe8a8SKTUIUvCB"
+  },
+  {
     "id": "mindhealer",
     "title": "MindHealer",
     "description": "中文心理咨询大模型。基于 Google Gemma-4 微调，QLoRA 训练，vLLM 部署。",

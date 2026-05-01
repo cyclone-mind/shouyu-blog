@@ -1,4 +1,13 @@
-[
+[{
+    "id":"map-course",
+    "title": "地图制作课程-一天完成 Sass 服务落地",
+    "description": "本项目旨 vibe coding 快速落地一个真实的 Sass 服务（课程内容尚未开发）。核心在于订阅、支付相关的功能验证，且无需营业执照，适合个人开发者。",
+    "year": 2026,
+    "status": "Completed",
+    "authors": ["cyclone-mind"],
+    "heroImage": "/src/assets/nature.png",
+    "link": "https://map-course.vercel.app/"
+},
   {
     "id":"coze-agent",
     "title": "一键生成行业调研PPT 工作流",
